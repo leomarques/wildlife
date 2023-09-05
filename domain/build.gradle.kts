@@ -36,8 +36,8 @@ android {
 dependencies {
     implementation(project(mapOf("path" to ":data")))
 
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.4")
+
     implementation("io.insert-koin:koin-android:3.4.3")
     implementation("io.insert-koin:koin-androidx-compose:3.4.6")
-
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.4")
 }
