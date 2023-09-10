@@ -2,7 +2,6 @@ package lmm.wildlife.ui.theme
 
 import android.app.Activity
 import android.os.Build
-import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.darkColorScheme
 import androidx.compose.material3.dynamicDarkColorScheme
@@ -17,14 +16,12 @@ import androidx.core.view.WindowCompat
 
 private val darkColorScheme = darkColorScheme(
     primary = RedDead,
-    secondary = PurpleGrey80,
-    tertiary = Pink80
+    secondary = DarkOrange
 )
 
 private val lightColorScheme = lightColorScheme(
     primary = RedDead,
-    secondary = PurpleGrey40,
-    tertiary = Pink40
+    secondary = DarkOrange
 
     /* Other default colors to override
     background = Color(0xFFFFFBFE),
@@ -39,7 +36,7 @@ private val lightColorScheme = lightColorScheme(
 
 @Composable
 fun WildlifeTheme(
-    darkTheme: Boolean = isSystemInDarkTheme(),
+    darkTheme: Boolean = true,
     // Dynamic color is available on Android 12+
     dynamicColor: Boolean = false,
     content: @Composable () -> Unit

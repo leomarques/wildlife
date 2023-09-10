@@ -1,4 +1,4 @@
-package lmm.wildlife.ui.animals
+package lmm.wildlife.ui.animals.components
 
 import androidx.compose.foundation.layout.Row
 import androidx.compose.runtime.Composable
@@ -11,11 +11,11 @@ fun Header() {
     Row {
         PropertyHeader(stringResource(R.string.name))
         PropertyHeader(stringResource(R.string.tier))
+        PropertyHeader(stringResource(R.string.body_type))
         PropertyHeader(stringResource(R.string.weapon))
         PropertyHeader(stringResource(R.string.trapper))
         PropertyHeader(stringResource(R.string.camp))
         PropertyHeader(stringResource(R.string.appelation))
-        PropertyHeader(stringResource(R.string.body_type))
     }
 }
 
@@ -23,6 +23,6 @@ fun Header() {
 private fun PropertyHeader(text: String) {
     PropertyCell(
         text = text,
-        color = Color.Gray
+        textColor = Color.Gray
     )
 }
