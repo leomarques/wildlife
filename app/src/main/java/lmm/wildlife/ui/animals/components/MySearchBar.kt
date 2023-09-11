@@ -26,7 +26,7 @@ fun MySearchBar(
     onSearch: (String) -> Unit
 ) {
     var text by rememberSaveable { mutableStateOf("") }
-    
+
     Box {
         SearchBar(
             modifier = Modifier

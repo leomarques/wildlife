@@ -1,12 +1,12 @@
 package lmm.data
 
+import lmm.data.animalreader.AnimalReader
+import lmm.data.animalreader.AnimalReaderImpl
 import lmm.data.coroutine.CoroutineDispatcherProvider
 import lmm.data.coroutine.CoroutineDispatcherProviderImpl
 import lmm.data.database.AnimalDatabase
-import lmm.data.animalreader.AnimalReader
 import lmm.data.repository.AnimalRepository
 import lmm.data.repository.AnimalRepositoryImpl
-import lmm.data.animalreader.AnimalReaderImpl
 import lmm.data.sharedpref.SharedPreferencesImpl
 import lmm.data.sharedpref.SharedPreferencesProvider
 import org.koin.core.module.dsl.bind
