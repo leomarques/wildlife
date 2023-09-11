@@ -20,19 +20,21 @@ class SetupViewModel(
 
     init {
         viewModelScope.launch {
-            if (dataInteractor.isFirstTime()) {
-                saveAllAnimalsInteractor.execute {
-                    dataInteractor.saveNotFirstTime()
-
-                    _setupUiState.update { currentState ->
-                        currentState.copy(isLoading = false)
+            dataInteractor.shouldPopulateDB().collect { shouldPopulateDB ->
+                if (shouldPopulateDB) {
+                    saveAllAnimalsInteractor.execute {
+                        finish()
                     }
-                }
-            } else {
-                _setupUiState.update { currentState ->
-                    currentState.copy(isLoading = false)
+                } else {
+                    finish()
                 }
             }
+        }
+    }
+
+    private fun finish() {
+        _setupUiState.update { currentState ->
+            currentState.copy(isLoading = false)
         }
     }
 }

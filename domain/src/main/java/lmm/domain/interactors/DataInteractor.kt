@@ -1,15 +1,8 @@
 package lmm.domain.interactors
 
-import lmm.data.sharedpref.SharedPreferencesProvider
+import lmm.data.repository.AnimalRepository
 
-class DataInteractor(
-    private val sharedPreferencesProvider: SharedPreferencesProvider
-) {
-    fun isFirstTime(): Boolean {
-        return sharedPreferencesProvider.provide().getBoolean("isFirstTime", true)
-    }
+class DataInteractor(private val animalRepository: AnimalRepository) {
 
-    fun saveNotFirstTime() {
-        sharedPreferencesProvider.provide().edit().putBoolean("isFirstTime", false).apply()
-    }
+    fun shouldPopulateDB() = animalRepository.isDBEmpty()
 }
