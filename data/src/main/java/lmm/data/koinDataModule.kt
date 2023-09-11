@@ -7,8 +7,8 @@ import lmm.data.coroutine.CoroutineDispatcherProviderImpl
 import lmm.data.database.AnimalDatabase
 import lmm.data.repository.AnimalRepository
 import lmm.data.repository.AnimalRepositoryImpl
-import lmm.data.sharedpref.SharedPreferencesImpl
-import lmm.data.sharedpref.SharedPreferencesProvider
+import lmm.data.repository.DBRepository
+import lmm.data.repository.DBRepositoryImpl
 import org.koin.core.module.dsl.bind
 import org.koin.core.module.dsl.factoryOf
 import org.koin.dsl.module
@@ -19,7 +19,7 @@ val dataModule = module {
     }
 
     factoryOf(::CoroutineDispatcherProviderImpl) { bind<CoroutineDispatcherProvider>() }
-    factoryOf(::SharedPreferencesImpl) { bind<SharedPreferencesProvider>() }
+    factoryOf(::DBRepositoryImpl) { bind<DBRepository>() }
 
     factoryOf(::AnimalRepositoryImpl) { bind<AnimalRepository>() }
     factoryOf(::AnimalReaderImpl) { bind<AnimalReader>() }

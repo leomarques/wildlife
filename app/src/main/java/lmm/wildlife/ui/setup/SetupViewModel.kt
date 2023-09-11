@@ -22,8 +22,6 @@ class SetupViewModel(
         viewModelScope.launch {
             if (dataInteractor.isFirstTime()) {
                 saveAllAnimalsInteractor.execute {
-                    dataInteractor.saveNotFirstTime()
-
                     _setupUiState.update { currentState ->
                         currentState.copy(isLoading = false)
                     }
