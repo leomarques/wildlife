@@ -4,7 +4,7 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import lmm.wildlife.ui.animals.AnimalsView
-import lmm.wildlife.ui.splash.SplashScreen
+import lmm.wildlife.ui.setup.SetupView
 import lmm.wildlife.ui.theme.WildlifeTheme
 
 class MainActivity : ComponentActivity() {
@@ -12,7 +12,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             WildlifeTheme {
-                SplashScreen {
+                SetupView {
                     AnimalsView()
                 }
             }

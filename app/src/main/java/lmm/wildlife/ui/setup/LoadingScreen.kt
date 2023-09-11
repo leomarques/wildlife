@@ -1,4 +1,4 @@
-package lmm.wildlife.ui.splash
+package lmm.wildlife.ui.setup
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box

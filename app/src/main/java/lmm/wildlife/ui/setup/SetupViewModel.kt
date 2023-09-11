@@ -1,4 +1,4 @@
-package lmm.wildlife.ui.splash
+package lmm.wildlife.ui.setup
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -10,13 +10,13 @@ import kotlinx.coroutines.launch
 import lmm.domain.interactors.DataInteractor
 import lmm.domain.interactors.SaveAllAnimalsInteractor
 
-class SplashViewModel(
+class SetupViewModel(
     private val dataInteractor: DataInteractor,
     private val saveAllAnimalsInteractor: SaveAllAnimalsInteractor,
 ) : ViewModel() {
 
-    private val _splashUiState = MutableStateFlow(SplashUIState())
-    val splashUiState: StateFlow<SplashUIState> = _splashUiState.asStateFlow()
+    private val _setupUiState = MutableStateFlow(SetupUIState())
+    val setupUiState: StateFlow<SetupUIState> = _setupUiState.asStateFlow()
 
     init {
         viewModelScope.launch {
@@ -24,12 +24,12 @@ class SplashViewModel(
                 saveAllAnimalsInteractor.execute {
                     dataInteractor.saveNotFirstTime()
 
-                    _splashUiState.update { currentState ->
+                    _setupUiState.update { currentState ->
                         currentState.copy(isLoading = false)
                     }
                 }
             } else {
-                _splashUiState.update { currentState ->
+                _setupUiState.update { currentState ->
                     currentState.copy(isLoading = false)
                 }
             }
