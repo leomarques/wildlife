@@ -37,7 +37,6 @@ private val lightColorScheme = lightColorScheme(
 @Composable
 fun WildlifeTheme(
     darkTheme: Boolean = true,
-    // Dynamic color is available on Android 12+
     dynamicColor: Boolean = false,
     content: @Composable () -> Unit
 ) {
