@@ -12,5 +12,5 @@ interface AnimalDao {
     fun selectAll(): Flow<List<AnimalEntity>>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    fun insert(animalEntity: AnimalEntity)
+    suspend fun insert(animalEntity: AnimalEntity)
 }

@@ -22,10 +22,8 @@ class AnimalRepositoryImpl(
     }
 
     override suspend fun saveAll(list: List<AnimalEntity>) {
-        withContext(coroutineDispatcherProvider.provide()) {
-            list.forEach { animal ->
-                animalDao.insert(animal)
-            }
+        list.forEach { animal ->
+            animalDao.insert(animal)
         }
     }
 
@@ -52,9 +50,11 @@ class AnimalRepositoryImpl(
         }
     }
 
-    override fun isDBEmpty() = flow {
-        animalDao.selectAll().collect {
-            emit(it.isEmpty())
+    override fun isTableEmpty(): Flow<Boolean> {
+        return flow {
+            animalDao.selectAll().collect {
+                emit(it.isEmpty())
+            }
         }
     }
 }

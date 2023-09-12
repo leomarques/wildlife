@@ -15,26 +15,20 @@ class SetupViewModel(
     private val saveAllAnimalsInteractor: SaveAllAnimalsInteractor,
 ) : ViewModel() {
 
-    private val _setupUiState = MutableStateFlow(SetupUIState())
-    val setupUiState: StateFlow<SetupUIState> = _setupUiState.asStateFlow()
+    private val _setupUiState = MutableStateFlow(true)
+    val setupUiState: StateFlow<Boolean> = _setupUiState.asStateFlow()
 
     init {
         viewModelScope.launch {
             dataInteractor.shouldPopulateDB().collect { shouldPopulateDB ->
                 if (shouldPopulateDB) {
                     saveAllAnimalsInteractor.execute {
-                        finish()
+                        _setupUiState.update { false }
                     }
                 } else {
-                    finish()
+                    _setupUiState.update { false }
                 }
             }
-        }
-    }
-
-    private fun finish() {
-        _setupUiState.update { currentState ->
-            currentState.copy(isLoading = false)
         }
     }
 }

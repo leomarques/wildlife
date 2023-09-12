@@ -4,5 +4,5 @@ import lmm.data.repository.AnimalRepository
 
 class DataInteractor(private val animalRepository: AnimalRepository) {
 
-    fun shouldPopulateDB() = animalRepository.isDBEmpty()
+    fun shouldPopulateDB() = animalRepository.isTableEmpty()
 }

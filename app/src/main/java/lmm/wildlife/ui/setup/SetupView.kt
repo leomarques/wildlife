@@ -10,9 +10,9 @@ fun SetupView(
     viewModel: SetupViewModel = koinViewModel(),
     nextContent: @Composable () -> Unit
 ) {
-    val uiState by viewModel.setupUiState.collectAsState()
+    val isLoading by viewModel.setupUiState.collectAsState()
 
-    if (uiState.isLoading) {
+    if (isLoading) {
         LoadingScreen()
     } else {
         nextContent()

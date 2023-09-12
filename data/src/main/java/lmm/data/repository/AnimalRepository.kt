@@ -7,5 +7,5 @@ interface AnimalRepository {
     fun getAll(): Flow<List<AnimalEntity>>
     suspend fun saveAll(list: List<AnimalEntity>)
     suspend fun getAnimalsForSaving(): Flow<List<AnimalEntity>>
-    fun isDBEmpty(): Flow<Boolean>
+    fun isTableEmpty(): Flow<Boolean>
 }
