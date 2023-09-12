@@ -8,13 +8,13 @@ import org.koin.androidx.compose.koinViewModel
 @Composable
 fun SetupView(
     viewModel: SetupViewModel = koinViewModel(),
-    nextContent: @Composable () -> Unit
+    onDone: () -> Unit
 ) {
-    val isLoading by viewModel.setupUiState.collectAsState()
+    val isLoading by viewModel.isLoading.collectAsState()
 
     if (isLoading) {
         LoadingScreen()
     } else {
-        nextContent()
+        onDone()
     }
 }
