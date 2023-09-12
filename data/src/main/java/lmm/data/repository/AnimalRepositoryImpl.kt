@@ -6,6 +6,7 @@ import kotlinx.coroutines.flow.asFlow
 import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.withContext
 import lmm.data.animalreader.AnimalReader
+import lmm.data.animalreader.toAnimalEntity
 import lmm.data.coroutine.CoroutineDispatcherProvider
 import lmm.data.database.AnimalDao
 import lmm.data.database.AnimalEntity
@@ -30,22 +31,7 @@ class AnimalRepositoryImpl(
     override suspend fun getAnimalsForSaving(): Flow<List<AnimalEntity>> {
         return withContext(coroutineDispatcherProvider.provide()) {
             return@withContext listOf(
-                animalReader.getAnimals(context).map {
-                    with(it) {
-                        AnimalEntity(
-                            name,
-                            appelation,
-                            tier,
-                            bodyType,
-                            weapon,
-                            trapper,
-                            camp,
-                            total,
-                            have,
-                            need
-                        )
-                    }
-                }
+                animalReader.getAnimals(context).toAnimalEntity()
             ).asFlow()
         }
     }
