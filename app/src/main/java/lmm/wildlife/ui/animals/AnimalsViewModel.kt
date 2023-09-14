@@ -17,9 +17,8 @@ class AnimalsViewModel(
 
     init {
         viewModelScope.launch {
-            getAllAnimalsInteractor.execute().collect { list ->
-                _animalsUIState.value = AnimalsUIState(list)
-            }
+            val animals = getAllAnimalsInteractor.execute()
+            _animalsUIState.value = AnimalsUIState(animals)
         }
     }
 }

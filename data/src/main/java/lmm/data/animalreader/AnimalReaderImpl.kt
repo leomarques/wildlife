@@ -6,7 +6,7 @@ import org.apache.commons.csv.CSVParser
 import java.io.BufferedReader
 
 class AnimalReaderImpl : AnimalReader {
-    override fun getAnimals(context: Context): List<AnimalReaderModel> {
+    override suspend fun getAnimals(context: Context): List<AnimalReaderModel> {
         val bufferReader = BufferedReader(context.assets.open("wildlife.csv").reader())
         val csvParser = CSVParser.parse(
             bufferReader,

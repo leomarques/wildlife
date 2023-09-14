@@ -1,9 +1,6 @@
 package lmm.data.repository
 
 import android.content.Context
-import kotlinx.coroutines.flow.Flow
-import kotlinx.coroutines.flow.asFlow
-import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.withContext
 import lmm.data.animalreader.AnimalReader
 import lmm.data.animalreader.toAnimalEntity
@@ -18,7 +15,7 @@ class AnimalRepositoryImpl(
     private val context: Context
 ) : AnimalRepository {
 
-    override fun getAll(): Flow<List<AnimalEntity>> {
+    override suspend fun getAll(): List<AnimalEntity> {
         return animalDao.selectAll()
     }
 
@@ -28,19 +25,13 @@ class AnimalRepositoryImpl(
         }
     }
 
-    override suspend fun getAnimalsForSaving(): Flow<List<AnimalEntity>> {
+    override suspend fun getAnimalsForSaving(): List<AnimalEntity> {
         return withContext(coroutineDispatcherProvider.provide()) {
-            return@withContext listOf(
-                animalReader.getAnimals(context).toAnimalEntity()
-            ).asFlow()
+            animalReader.getAnimals(context).toAnimalEntity()
         }
     }
 
-    override fun isTableEmpty(): Flow<Boolean> {
-        return flow {
-            animalDao.selectAll().collect {
-                emit(it.isEmpty())
-            }
-        }
+    override suspend fun isTableEmpty(): Boolean {
+        return animalDao.selectAll().isEmpty()
     }
 }

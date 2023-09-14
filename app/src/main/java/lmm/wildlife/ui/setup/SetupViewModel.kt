@@ -20,14 +20,12 @@ class SetupViewModel(
 
     init {
         viewModelScope.launch {
-            dataInteractor.shouldPopulateDB().collect { shouldPopulateDB ->
-                if (shouldPopulateDB) {
-                    saveAllAnimalsInteractor.execute {
-                        _isLoading.update { false }
-                    }
-                } else {
-                    _isLoading.update { false }
-                }
+            val shouldPopulateDB = dataInteractor.shouldPopulateDB()
+            if (shouldPopulateDB) {
+                saveAllAnimalsInteractor.execute()
+                _isLoading.update { false }
+            } else {
+                _isLoading.update { false }
             }
         }
     }

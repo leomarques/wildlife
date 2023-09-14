@@ -1,11 +1,10 @@
 package lmm.data.repository
 
-import kotlinx.coroutines.flow.Flow
 import lmm.data.database.AnimalEntity
 
 interface AnimalRepository {
-    fun getAll(): Flow<List<AnimalEntity>>
+    suspend fun getAll(): List<AnimalEntity>
     suspend fun saveAll(list: List<AnimalEntity>)
-    suspend fun getAnimalsForSaving(): Flow<List<AnimalEntity>>
-    fun isTableEmpty(): Flow<Boolean>
+    suspend fun getAnimalsForSaving(): List<AnimalEntity>
+    suspend fun isTableEmpty(): Boolean
 }
