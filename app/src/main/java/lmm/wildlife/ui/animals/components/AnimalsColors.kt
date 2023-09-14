@@ -13,6 +13,13 @@ fun String.getTierColor() = when (this) {
     "Feather" -> DarkBlue
     "Antler" -> DarkPurple
     "Carcass" -> DarkYellow
+
+    "Lendário" -> DarkOrange
+    "Perfeito" -> DarkGreen
+    "Pena" -> DarkBlue
+    "Chifre" -> DarkPurple
+    "Carcaça" -> DarkYellow
+
     else -> null
 }
 
@@ -22,6 +29,13 @@ fun String.getWeaponColor() = when (this) {
     "Varmint Rifle" -> DarkOrange
     "Repeater" -> DarkRed
     "Game Arrow" -> DarkGreen
+
+    "Rifle de Precisão" -> DarkPurple
+    "Rifle Padrão" -> DarkBlue
+    "Rifle Antipragas" -> DarkOrange
+    "Arma de Repetição" -> DarkRed
+    "Flecha de Caça Pequena" -> DarkGreen
+
     else -> DarkYellow
 }
 
@@ -30,14 +44,11 @@ fun String.getAppelationColor() = when (this) {
     "Tatanka" -> DarkGreen
     "White" -> DarkBlue
     "Collared" -> DarkPurple
+
+    "Negro" -> DarkRed
+    "Búfalo" -> DarkGreen
+    "Branco" -> DarkBlue
+    "Colarinho" -> DarkPurple
+
     else -> null
 }
-
-//fun String.getBodyTypeColor() = when (this) {
-//    "Massive" -> DarkRed
-//    "Large" -> DarkOrange
-//    "Moderate" -> DarkPurple
-//    "Medium" -> DarkBlue
-//    "Small" -> DarkGreen
-//    else -> null
-//}

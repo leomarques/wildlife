@@ -17,6 +17,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontStyle
+import androidx.compose.ui.text.intl.Locale
 import androidx.compose.ui.tooling.preview.Preview
 import lmm.domain.model.Animal
 import lmm.wildlife.R
@@ -45,7 +46,7 @@ fun AnimalItem(animal: Animal) {
                     color = animal.tier.getTierColor() ?: MaterialTheme.colorScheme.onSurface
                 )
 
-                Spacer(modifier = Modifier.width(SpaceSize.SmallSpaceSize))
+                Spacer(modifier = Modifier.width(SpaceSize.XSmallSpaceSize))
 
                 if (animal.appelation.isNotBlank()) {
                     Text(
@@ -58,7 +59,15 @@ fun AnimalItem(animal: Animal) {
                 }
             }
             Text(
-                text = animal.weapon.ifBlank { stringResource(R.string.any_weapon) },
+                text = animal.weapon.ifBlank {
+                    stringResource(
+                        if (Locale.current.language == "pt") {
+                            R.string.qualquer_arma
+                        } else {
+                            R.string.any_weapon
+                        }
+                    )
+                },
                 style = MaterialTheme.typography.bodyMedium,
                 color = animal.weapon.getWeaponColor()
             )

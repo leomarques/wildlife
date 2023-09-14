@@ -21,6 +21,6 @@ class GetAllAnimalsInteractor(private val animalRepository: AnimalRepository) {
                     need
                 )
             }
-        }
+        }.sortedBy { animal -> animal.name }
     }
 }
