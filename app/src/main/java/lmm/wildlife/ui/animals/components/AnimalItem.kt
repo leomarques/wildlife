@@ -1,96 +1,76 @@
 package lmm.wildlife.ui.animals.components
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.width
+import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.tooling.preview.Preview
 import lmm.domain.model.Animal
-import lmm.wildlife.ui.theme.DarkBlue
-import lmm.wildlife.ui.theme.DarkGreen
-import lmm.wildlife.ui.theme.DarkOrange
-import lmm.wildlife.ui.theme.DarkPurple
-import lmm.wildlife.ui.theme.DarkRed
-import lmm.wildlife.ui.theme.DarkYellow
+import lmm.wildlife.R
+import lmm.wildlife.ui.theme.SpaceSize
 
 @Composable
 fun AnimalItem(animal: Animal) {
-    Column(
-        Modifier
-            .background(MaterialTheme.colorScheme.background)
+    Row(
+        modifier = Modifier
+            .background(MaterialTheme.colorScheme.surface)
+            .fillMaxWidth()
+            .height(SpaceSize.ListItemHeight)
+            .padding(vertical = SpaceSize.SmallSpaceSize)
+            .padding(
+                start = SpaceSize.DefaultSpaceSize,
+                end = SpaceSize.DefaultSpaceSize
+            ),
+        verticalAlignment = Alignment.CenterVertically,
+        horizontalArrangement = Arrangement.SpaceBetween
     ) {
-        Row {
-            PropertyCell(animal.name)
-            PropertyCell(
-                text = animal.tier,
-                textColor = Color.White,
-                textBoxColor = getTierColor(animal.tier)
-            )
-            PropertyCell(
-                animal.bodyType,
-                textColor = Color.White,
-                textBoxColor = getBodyTypeColor(animal.bodyType)
-            )
-            PropertyCell(
-                text = animal.weapon,
-                textColor = Color.White,
-                textBoxColor = getWeaponColor(animal.weapon)
-            )
-            PropertyCell(animal.trapper.toString())
-            PropertyCell(animal.camp.toString())
-            PropertyCell(
-                animal.appelation,
-                textColor = Color.White,
-                textBoxColor = getAppelationColor(animal.appelation)
+        Column {
+            Row {
+                Text(
+                    text = animal.name,
+                    style = MaterialTheme.typography.bodyLarge,
+                    color = animal.tier.getTierColor() ?: MaterialTheme.colorScheme.onSurface
+                )
+
+                Spacer(modifier = Modifier.width(SpaceSize.SmallSpaceSize))
+
+                if (animal.appelation.isNotBlank()) {
+                    Text(
+                        text = "(${animal.appelation})",
+                        style = MaterialTheme.typography.bodyLarge,
+                        fontStyle = FontStyle.Italic,
+                        color = animal.appelation.getAppelationColor()
+                            ?: MaterialTheme.colorScheme.onSurface
+                    )
+                }
+            }
+            Text(
+                text = animal.weapon.ifBlank { stringResource(R.string.any_weapon) },
+                style = MaterialTheme.typography.bodyMedium,
+                color = animal.weapon.getWeaponColor()
             )
         }
+        VendorsCount(
+            first = "${animal.camp}",
+            second = ":",
+            third = "${animal.trapper}"
+        )
     }
-}
 
-fun getTierColor(tier: String): Color? {
-    return when (tier) {
-        "Legendary" -> DarkOrange
-        "Perfect" -> DarkGreen
-        "Feather" -> DarkBlue
-        "Antler" -> DarkPurple
-        "Carcass" -> DarkYellow
-        else -> null
-    }
-}
-
-fun getWeaponColor(weapon: String): Color? {
-    return when (weapon) {
-        "Sniper Rifle" -> DarkPurple
-        "Regular Rifle" -> DarkGreen
-        "Varmint Rifle" -> DarkBlue
-        "Repeater" -> DarkRed
-        "Game Arrow" -> DarkOrange
-        else -> null
-    }
-}
-
-fun getAppelationColor(appelation: String): Color? {
-    return when (appelation) {
-        "Black" -> DarkRed
-        "Tatanka" -> DarkGreen
-        "White" -> DarkBlue
-        "Collared" -> DarkPurple
-        else -> null
-    }
-}
-
-fun getBodyTypeColor(bodyType: String): Color? {
-    return when (bodyType) {
-        "Massive" -> DarkRed
-        "Large" -> DarkOrange
-        "Moderate" -> DarkPurple
-        "Medium" -> DarkBlue
-        "Small" -> DarkGreen
-        else -> null
-    }
+    HorizontalDivider(thickness = SpaceSize.XXSmallSpaceSize)
 }
 
 @Preview

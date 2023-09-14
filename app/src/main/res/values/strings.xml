@@ -1,11 +1,5 @@
 <resources>
     <string name="app_name">Wildlife</string>
 
-    <string name="name">Name</string>
-    <string name="tier">Tier</string>
-    <string name="weapon">Weapon</string>
-    <string name="trapper">Trapper</string>
-    <string name="camp">Camp</string>
-    <string name="appelation">Appelation</string>
-    <string name="body_type">Body Type</string>
+    <string name="any_weapon">Any Weapon</string>
 </resources>
