@@ -4,17 +4,16 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.width
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.intl.Locale
@@ -33,7 +32,7 @@ fun AnimalItem(animal: Animal) {
             .padding(vertical = SpaceSize.SmallSpaceSize)
             .padding(
                 start = SpaceSize.DefaultSpaceSize,
-                end = SpaceSize.DefaultSpaceSize
+                end = SpaceSize.XDefaultSpaceSize
             ),
         verticalAlignment = Alignment.CenterVertically,
         horizontalArrangement = Arrangement.SpaceBetween
@@ -41,12 +40,16 @@ fun AnimalItem(animal: Animal) {
         Column {
             Row {
                 Text(
-                    text = animal.name,
+                    text = "${animal.name} ",
                     style = MaterialTheme.typography.bodyLarge,
-                    color = animal.tier.getTierColor() ?: MaterialTheme.colorScheme.onSurface
                 )
 
-                Spacer(modifier = Modifier.width(SpaceSize.XSmallSpaceSize))
+                Text(
+                    text = "(${animal.tier}) ",
+                    style = MaterialTheme.typography.bodyLarge,
+                    fontStyle = FontStyle.Italic,
+                    color = animal.tier.getTierColor() ?: MaterialTheme.colorScheme.onSurface
+                )
 
                 if (animal.appelation.isNotBlank()) {
                     Text(
@@ -72,11 +75,7 @@ fun AnimalItem(animal: Animal) {
                 color = animal.weapon.getWeaponColor()
             )
         }
-        VendorsCount(
-            first = "${animal.camp}",
-            second = ":",
-            third = "${animal.trapper}"
-        )
+        Text("${animal.camp}:${animal.trapper}", color = Color.Gray)
     }
 
     HorizontalDivider(thickness = SpaceSize.XXSmallSpaceSize)
@@ -87,9 +86,9 @@ fun AnimalItem(animal: Animal) {
 fun AnimalItemPreview() {
     AnimalItem(
         animal = Animal(
-            name = "Cachorro",
+            name = "Bison",
             appelation = "Tatanka",
-            tier = "Legendary",
+            tier = "Skin",
             bodyType = "Massive",
             weapon = "Sniper Rifle",
             trapper = 1,

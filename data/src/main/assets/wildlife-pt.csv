@@ -1,66 +1,66 @@
-Jacaré,,Perfeito,Grande,Rifle Padrão,1,1,2,1,1
-Tatu,,Perfeito,Moderado,Rifle Antipragas,2,0,2,0,2
-Texugo,,Perfeito,Moderado,Rifle Antipragas,2,1,3,0,3
-Urso,,Perfeito,Massivo,Rifle de Precisão,1,0,1,0,1
-Urso,Negro,Perfeito,Massivo,Rifle de Precisão,2,0,2,0,2
-Castor,,Perfeito,Médio,Arma de Repetição,9,2,11,0,11
-Bisonte,,Perfeito,Massivo,Rifle de Precisão,3,1,4,1,3
+Jacaré,,Pele,Grande,Rifle Padrão,1,1,2,1,1
+Tatu,,Pele,Moderado,Rifle Antipragas,2,0,2,0,2
+Texugo,,Pele,Moderado,Rifle Antipragas,2,1,3,0,3
+Urso,,Pele,Massivo,Rifle de Precisão,1,0,1,0,1
+Urso,Negro,Pele,Massivo,Rifle de Precisão,2,0,2,0,2
+Castor,,Pele,Médio,Arma de Repetição,9,2,11,0,11
+Bisonte,,Pele,Massivo,Rifle de Precisão,3,1,4,1,3
 Gaio Azul,,Pena,,,3,0,3,0,3
-Javali,,Perfeito,Grande,Rifle Padrão,10,6,16,0,16
-Cervo,,Perfeito,Grande,Rifle Padrão,3,1,4,0,4
+Javali,,Pele,Grande,Rifle Padrão,10,6,16,0,16
+Cervo,,Pele,Grande,Rifle Padrão,3,1,4,0,4
 Cervo,,Chifre,,,0,1,1,0,1
-Touro,,Perfeito,Massivo,Rifle de Precisão,3,0,3,0,3
+Touro,,Pele,Massivo,Rifle de Precisão,3,0,3,0,3
 Cardeal,,Pena,,,3,0,3,0,3
 Tiziu,,Pena,,,2,0,2,0,2
 Galinha,,Pena,,,4,0,4,0,4
 Condor,,Pena,,,1,0,1,0,1
-Puma,,Perfeito,Grande,Rifle Padrão,3,2,5,0,5
-Vaca,,Perfeito,Massivo,Rifle de Precisão,4,1,5,0,5
-Coiote,,Perfeito,Médio,Arma de Repetição,3,0,3,0,3
+Puma,,Pele,Grande,Rifle Padrão,3,2,5,0,5
+Vaca,,Pele,Massivo,Rifle de Precisão,4,1,5,0,5
+Coiote,,Pele,Médio,Arma de Repetição,3,0,3,0,3
 Corvo,,Pena,,,2,0,2,0,2
-Veado,,Perfeito,Grande,Rifle Padrão,3,7,10,0,10
+Veado,,Pele,Grande,Rifle Padrão,3,7,10,0,10
 Pato,,Pena,,,3,0,3,0,3
 Águia,,Pena,,,4,0,4,0,4
-Alce,,Perfeito,Massivo,Rifle de Precisão,4,2,6,0,6
+Alce,,Pele,Massivo,Rifle de Precisão,4,2,6,0,6
 Alce,,Chifre,,,0,1,1,0,1
-Raposa,,Perfeito,Médio,Arma de Repetição,3,1,4,0,4
-Lagarto Gila,,Perfeito,Moderado,Rifle Antipragas,2,0,2,0,2
-Cabra,,Perfeito,Grande,Rifle Padrão,7,2,9,0,9
+Raposa,,Pele,Médio,Arma de Repetição,3,1,4,0,4
+Lagarto Gila,,Pele,Moderado,Rifle Antipragas,2,0,2,0,2
+Cabra,,Pele,Grande,Rifle Padrão,7,2,9,0,9
 Ganso,,Pena,,,2,0,2,0,2
 Falcão,,Pena,,,3,0,3,0,3
-Iguana,,Perfeito,Moderado,Arma de Repetição,3,1,4,0,4
+Iguana,,Pele,Moderado,Arma de Repetição,3,1,4,0,4
 Mergulhão,,Pena,,,2,0,2,0,2
-Alce Negro,,Perfeito,Massivo,Rifle de Precisão,3,0,3,0,3
+Alce Negro,,Pele,Massivo,Rifle de Precisão,3,0,3,0,3
 Alce Negro,,Chifre,,,0,1,1,0,1
-Ratazana,,Perfeito,Moderado,Rifle Antipragas,5,1,6,0,6
+Ratazana,,Pele,Moderado,Rifle Antipragas,5,1,6,0,6
 Oriole,,Pena,,,5,0,5,0,5
 Coruja,,Pena,,,1,0,1,0,1
-Boi,,Perfeito,Massivo,Rifle de Precisão,2,2,4,0,4
-Pantera,,Perfeito,Grande,Rifle Padrão,3,1,4,0,4
+Boi,,Pele,Massivo,Rifle de Precisão,2,2,4,0,4
+Pantera,,Pele,Grande,Rifle Padrão,3,1,4,0,4
 Faisão,,Pena,,,2,0,2,0,2
-Porco,,Perfeito,Médio,Arma de Repetição,1,0,1,0,1
-Porco,Colarinho,Perfeito,Médio,Arma de Repetição,2,0,2,0,2
+Porco,,Pele,Médio,Arma de Repetição,1,0,1,0,1
+Porco,Colarinho,Pele,Médio,Arma de Repetição,2,0,2,0,2
 Pombo,,Pena,,,2,0,2,0,2
-Gambá,,Perfeito,Moderado,Rifle Antipragas,4,0,4,0,4
-Antílope,,Perfeito,Grande,Rifle Padrão,4,2,6,0,6
+Gambá,,Pele,Moderado,Rifle Antipragas,4,0,4,0,4
+Antílope,,Pele,Grande,Rifle Padrão,4,2,6,0,6
 Antílope,,Carcaça,Grande,Rifle Padrão,0,1,1,0,1
 Codorna,,Pena,,,2,0,2,0,2
-Coelho,,Perfeito,Moderado,Rifle Antipragas,7,1,8,0,8
-Guaxinim,,Perfeito,Moderado,Rifle Antipragas,1,1,2,0,2
-Carneiro,,Perfeito,Grande,Rifle Padrão,5,0,5,0,5
+Coelho,,Pele,Moderado,Rifle Antipragas,7,1,8,0,8
+Guaxinim,,Pele,Moderado,Rifle Antipragas,1,1,2,0,2
+Carneiro,,Pele,Grande,Rifle Padrão,5,0,5,0,5
 Carneiro,,Carcaça,Grande,Rifle Padrão,0,1,1,0,1
-Rato,,Perfeito,Pequeno,Flecha de Caça Pequena,16,0,16,0,16
+Rato,,Pele,Pequeno,Flecha de Caça Pequena,16,0,16,0,16
 Corvo,,Pena,,,13,0,13,0,13
 Pintarroxo,,Pena,,,7,0,7,0,7
 Galo,,Pena,,,4,0,4,0,4
 Gaivota,,Pena,,,1,0,1,0,1
-Gambá,,Perfeito,Moderado,Rifle Antipragas,1,0,1,0,1
-Cobra,,Perfeito,Pequeno,Flecha de Caça Pequena,15,2,17,0,17
+Gambá,,Pele,Moderado,Rifle Antipragas,1,0,1,0,1
+Cobra,,Pele,Pequeno,Flecha de Caça Pequena,15,2,17,0,17
 Pássaro Canoro,,Pena,,,2,0,2,0,2
 Pardal,,Pena,,,4,0,4,0,4
-Esquilo,,Perfeito,Pequeno,Flecha de Caça Pequena,6,1,7,0,7
+Esquilo,,Pele,Pequeno,Flecha de Caça Pequena,6,1,7,0,7
 Peru,,Pena,,,4,0,4,0,4
 Abutre,,Pena,,,1,0,1,0,1
-Lobo,,Perfeito,Grande,Rifle Padrão,3,2,5,0,5
+Lobo,,Pele,Grande,Rifle Padrão,3,2,5,0,5
 Lobo,,Carcaça,Grande,Rifle Padrão,0,1,1,0,1
 Pica-pau,,Pena,,,6,0,6,0,6

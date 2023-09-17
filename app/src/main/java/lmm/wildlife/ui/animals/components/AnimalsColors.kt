@@ -9,13 +9,13 @@ import lmm.wildlife.ui.theme.DarkYellow
 
 fun String.getTierColor() = when (this) {
     "Legendary" -> DarkOrange
-    "Perfect" -> DarkGreen
+    "Skin" -> DarkGreen
     "Feather" -> DarkBlue
     "Antler" -> DarkPurple
     "Carcass" -> DarkYellow
 
     "Lendário" -> DarkOrange
-    "Perfeito" -> DarkGreen
+    "Pele" -> DarkGreen
     "Pena" -> DarkBlue
     "Chifre" -> DarkPurple
     "Carcaça" -> DarkYellow
