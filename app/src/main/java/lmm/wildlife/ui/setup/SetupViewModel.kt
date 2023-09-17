@@ -23,10 +23,8 @@ class SetupViewModel(
             val shouldPopulateDB = dataInteractor.shouldPopulateDB()
             if (shouldPopulateDB) {
                 saveAllAnimalsInteractor.execute()
-                _isLoading.update { false }
-            } else {
-                _isLoading.update { false }
             }
+            _isLoading.update { false }
         }
     }
 }
