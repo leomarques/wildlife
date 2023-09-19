@@ -14,6 +14,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import lmm.domain.model.Animal
 import lmm.wildlife.ui.animals.components.AnimalItem
 import lmm.wildlife.ui.animals.components.MySearchBar
+import java.text.Normalizer
 
 @Composable
 fun AnimalsLayout(animalsList: List<Animal>) {
@@ -34,16 +35,28 @@ fun AnimalsLayout(animalsList: List<Animal>) {
 
         LazyColumn {
             items(
-                animalsList.filter { animal ->
-                    animal.name
-                        .lowercase()
-                        .startsWith(filter.value.lowercase())
-                }
+                animalsList
+                    .filter { animal ->
+                        animal.name
+                            .lowercase()
+                            .normalize()
+                            .startsWith(
+                                filter.value
+                                    .lowercase()
+                                    .normalize()
+                            )
+                    }
+                    .sortedBy { animal -> animal.name.normalize() }
             ) { animal ->
                 AnimalItem(animal)
             }
         }
     }
+}
+
+fun CharSequence.normalize(): String {
+    val temp = Normalizer.normalize(this, Normalizer.Form.NFD)
+    return "\\p{InCombiningDiacriticalMarks}+".toRegex().replace(temp, "")
 }
 
 @Preview
