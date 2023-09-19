@@ -3,4 +3,6 @@
 
     <string name="any_weapon">Any Weapon</string>
     <string name="search_label">Search for animal name</string>
+    <string name="clear_search_icon_desc">clear search icon</string>
+    <string name="search_icon_desc">search icon</string>
 </resources>

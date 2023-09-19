@@ -54,7 +54,12 @@ fun MySearchBar(
                     color = Color.Gray
                 )
             },
-            leadingIcon = { Icon(Icons.Default.Search, contentDescription = null) },
+            leadingIcon = {
+                Icon(
+                    imageVector = Icons.Default.Search,
+                    contentDescription = stringResource(R.string.search_icon_desc)
+                )
+            },
             trailingIcon = {
                 if (showCloseIcon) {
                     IconButton(onClick = {
@@ -64,7 +69,7 @@ fun MySearchBar(
                     }) {
                         Icon(
                             imageVector = Icons.Default.Clear,
-                            contentDescription = null
+                            contentDescription = stringResource(R.string.clear_search_icon_desc)
                         )
                     }
                 }
