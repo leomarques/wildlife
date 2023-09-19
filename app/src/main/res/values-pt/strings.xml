@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Wildlife</string>
+
+    <string name="any_weapon">Qualquer arma</string>
+    <string name="search_label">Procure pelo nome do animal</string>
+</resources>

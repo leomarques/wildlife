@@ -19,7 +19,9 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
+import lmm.wildlife.R
 import lmm.wildlife.ui.theme.SpaceSize
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -46,7 +48,12 @@ fun MySearchBar(
             onSearch = onSearch,
             active = false,
             onActiveChange = {},
-            placeholder = { Text("Search for animal name", color = Color.Gray) },
+            placeholder = {
+                Text(
+                    text = stringResource(R.string.search_label),
+                    color = Color.Gray
+                )
+            },
             leadingIcon = { Icon(Icons.Default.Search, contentDescription = null) },
             trailingIcon = {
                 if (showCloseIcon) {

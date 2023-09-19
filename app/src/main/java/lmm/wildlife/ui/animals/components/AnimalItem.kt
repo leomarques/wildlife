@@ -16,7 +16,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontStyle
-import androidx.compose.ui.text.intl.Locale
 import androidx.compose.ui.tooling.preview.Preview
 import lmm.domain.model.Animal
 import lmm.wildlife.R
@@ -62,15 +61,7 @@ fun AnimalItem(animal: Animal) {
                 }
             }
             Text(
-                text = animal.weapon.ifBlank {
-                    stringResource(
-                        if (Locale.current.language == "pt") {
-                            R.string.qualquer_arma
-                        } else {
-                            R.string.any_weapon
-                        }
-                    )
-                },
+                text = animal.weapon.ifBlank { stringResource(R.string.any_weapon) },
                 style = MaterialTheme.typography.bodyMedium,
                 color = animal.weapon.getWeaponColor()
             )
