@@ -5,7 +5,7 @@ Wildlife is a hunting guide for the game <b>Red Dead Redemption 2</b>, it lists 
 
 ## Screenshot
 
-![Screenshot_20230916_223130](https://github.com/leomarques/wildlife/assets/1104925/957b9b7d-0a11-4a9e-8958-88e3785deb77)
+![a](https://github.com/leomarques/wildlife/assets/1104925/ffe92175-2abe-4255-bcad-2f07493da52b)
 
 ## License
 
