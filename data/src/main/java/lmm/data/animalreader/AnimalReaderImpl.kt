@@ -21,6 +21,7 @@ class AnimalReaderImpl : AnimalReader {
             CSVFormat.DEFAULT
         )
         val list = mutableListOf<AnimalReaderModel>()
+
         csvParser.forEach {
             it?.let {
                 val animals = AnimalReaderModel(

@@ -21,11 +21,6 @@ abstract class AnimalDatabase : RoomDatabase() {
         @Volatile
         private var INSTANCE: AnimalDatabase? = null
 
-        fun isDBCreated() =
-            if (INSTANCE != null) true else synchronized(this) {
-                INSTANCE != null
-            }
-
         fun getInstance(context: Context): AnimalDatabase =
             INSTANCE ?: synchronized(this) {
                 INSTANCE
