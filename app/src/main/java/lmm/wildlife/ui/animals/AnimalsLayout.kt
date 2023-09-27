@@ -71,10 +71,7 @@ fun AnimalsLayoutPreview() {
                 bodyType = "Massive",
                 weapon = "Sniper Rifle",
                 trapper = 1,
-                camp = 0,
-                total = 1,
-                have = 0,
-                need = 1
+                camp = 0
             ),
             Animal(
                 name = "Cachorro",
@@ -83,10 +80,7 @@ fun AnimalsLayoutPreview() {
                 bodyType = "Massive",
                 weapon = "Sniper Rifle",
                 trapper = 1,
-                camp = 0,
-                total = 1,
-                have = 0,
-                need = 1
+                camp = 0
             ),
             Animal(
                 name = "Cachorro",
@@ -95,11 +89,8 @@ fun AnimalsLayoutPreview() {
                 bodyType = "Massive",
                 weapon = "Sniper Rifle",
                 trapper = 1,
-                camp = 0,
-                total = 1,
-                have = 0,
-                need = 1
-            ),
+                camp = 0
+            )
         )
     )
 }

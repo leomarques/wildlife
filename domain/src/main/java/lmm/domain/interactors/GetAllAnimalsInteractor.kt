@@ -15,10 +15,7 @@ class GetAllAnimalsInteractor(private val animalRepository: AnimalRepository) {
                     bodyType,
                     weapon,
                     trapper,
-                    camp,
-                    total,
-                    have,
-                    need
+                    camp
                 )
             }
         }

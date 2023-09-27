@@ -10,5 +10,5 @@ data class AnimalReaderModel(
     val camp: Int,
     val total: Int,
     val have: Int,
-    val need: Int,
+    val need: Int
 )

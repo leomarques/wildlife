@@ -12,10 +12,7 @@ fun List<AnimalReaderModel>.toAnimalEntity(): List<AnimalEntity> {
                 bodyType = bodyType,
                 weapon = weapon,
                 trapper = trapper,
-                camp = camp,
-                total = total,
-                have = have,
-                need = need
+                camp = camp
             )
         }
     }

@@ -7,7 +7,7 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.HorizontalDivider
+import androidx.compose.material3.Divider
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -28,10 +28,9 @@ fun AnimalItem(animal: Animal) {
             .background(MaterialTheme.colorScheme.surface)
             .fillMaxWidth()
             .height(SpaceSize.ListItemHeight)
-            .padding(vertical = SpaceSize.SmallSpaceSize)
             .padding(
-                start = SpaceSize.DefaultSpaceSize,
-                end = SpaceSize.XDefaultSpaceSize
+                vertical = SpaceSize.SmallSpaceSize,
+                horizontal = SpaceSize.DefaultSpaceSize
             ),
         verticalAlignment = Alignment.CenterVertically,
         horizontalArrangement = Arrangement.SpaceBetween
@@ -40,7 +39,7 @@ fun AnimalItem(animal: Animal) {
             Row {
                 Text(
                     text = "${animal.name} ",
-                    style = MaterialTheme.typography.bodyLarge,
+                    style = MaterialTheme.typography.bodyLarge
                 )
 
                 Text(
@@ -69,7 +68,7 @@ fun AnimalItem(animal: Animal) {
         Text("${animal.camp}:${animal.trapper}", color = Color.Gray)
     }
 
-    HorizontalDivider(thickness = SpaceSize.XXSmallSpaceSize)
+    Divider(thickness = SpaceSize.XXSmallSpaceSize)
 }
 
 @Preview
@@ -83,10 +82,7 @@ fun AnimalItemPreview() {
             bodyType = "Massive",
             weapon = "Sniper Rifle",
             trapper = 1,
-            camp = 0,
-            total = 1,
-            have = 0,
-            need = 1
+            camp = 0
         )
     )
 }

@@ -12,7 +12,7 @@ import lmm.domain.interactors.SaveAllAnimalsInteractor
 
 class SetupViewModel(
     private val dataInteractor: DataInteractor,
-    private val saveAllAnimalsInteractor: SaveAllAnimalsInteractor,
+    private val saveAllAnimalsInteractor: SaveAllAnimalsInteractor
 ) : ViewModel() {
 
     private val _isLoading = MutableStateFlow(true)

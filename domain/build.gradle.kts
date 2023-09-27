@@ -36,7 +36,7 @@ android {
 dependencies {
     implementation(project(mapOf("path" to ":data")))
 
-    implementation(libs.kotlinx.coroutines.core)
-
     implementation(libs.koin.android)
+
+    implementation(libs.kotlinx.coroutines.core)
 }

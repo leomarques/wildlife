@@ -7,8 +7,5 @@ data class Animal(
     val bodyType: String,
     val weapon: String,
     val trapper: Int,
-    val camp: Int,
-    val total: Int,
-    val have: Int,
-    val need: Int,
+    val camp: Int
 )

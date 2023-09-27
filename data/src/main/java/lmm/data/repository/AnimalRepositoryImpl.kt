@@ -30,8 +30,4 @@ class AnimalRepositoryImpl(
             animalReader.getAnimals(context).toAnimalEntity()
         }
     }
-
-    override suspend fun isTableEmpty(): Boolean {
-        return animalDao.selectAll().isEmpty()
-    }
 }

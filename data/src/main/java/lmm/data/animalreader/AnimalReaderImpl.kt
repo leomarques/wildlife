@@ -34,7 +34,7 @@ class AnimalReaderImpl : AnimalReader {
                     camp = it.get(6).toInt(),
                     total = it.get(7).toInt(),
                     have = it.get(8).toInt(),
-                    need = it.get(9).toInt(),
+                    need = it.get(9).toInt()
                 )
                 list.add(animals)
             }

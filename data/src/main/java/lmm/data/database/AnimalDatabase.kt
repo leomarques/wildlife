@@ -9,7 +9,7 @@ import androidx.room.RoomDatabase
     entities = [
         AnimalEntity::class
     ],
-    version = 1,
+    version = 2,
     exportSchema = false
 )
 abstract class AnimalDatabase : RoomDatabase() {
@@ -29,9 +29,11 @@ abstract class AnimalDatabase : RoomDatabase() {
 
         private fun buildDatabase(context: Context) =
             Room.databaseBuilder(
-                context.applicationContext,
-                AnimalDatabase::class.java, "Animal.db"
+                context = context.applicationContext,
+                klass = AnimalDatabase::class.java,
+                name = "Animal.db"
             )
+                .fallbackToDestructiveMigration()
                 .build()
     }
 }
