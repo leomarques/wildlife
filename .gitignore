@@ -138,3 +138,5 @@ fabric.properties
 .idea/deploymentTargetSelector.xml
 /.idea/migrations.xml
 .idea/androidTestResultsUserPreferences.xml
+.idea/codeStyles/Project.xml
+.idea/misc.xml
