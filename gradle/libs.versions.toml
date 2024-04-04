@@ -10,9 +10,9 @@ koinAndroidxCompose            = "3.5.0"
 kotlinxCoroutinesCore          = "1.7.3"
 commonsCsv                     = "1.5"
 
-androidApplication      = "8.1.1"
+androidApplication      = "8.3.1"
 jetbrainsKotlinAndroid  = "1.9.10"
-androidLibrary          = "8.1.1"
+androidLibrary          = "8.3.1"
 googleDevtoolsKsp       = "1.9.10-1.0.13"
 jlleitschuhGradleKtlint = "11.6.0"
 
