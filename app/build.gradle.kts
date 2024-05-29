@@ -12,8 +12,8 @@ android {
         applicationId = "lmm.wildlife"
         minSdk = 28
         targetSdk = 34
-        versionCode = 5
-        versionName = "1.0"
+        versionCode = 6
+        versionName = "1.1"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables {
@@ -41,7 +41,7 @@ android {
         compose = true
     }
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.5.3"
+        kotlinCompilerExtensionVersion = "1.5.13"
     }
     packaging {
         resources {
