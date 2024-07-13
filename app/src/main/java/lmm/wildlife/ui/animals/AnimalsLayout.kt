@@ -61,7 +61,7 @@ fun CharSequence.normalize(): String {
 
 @Preview
 @Composable
-fun AnimalsLayoutPreview() {
+private fun AnimalsLayoutPreview() {
     AnimalsLayout(
         animalsList = listOf(
             Animal(

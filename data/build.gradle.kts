@@ -36,14 +36,10 @@ android {
 
 dependencies {
     implementation(libs.apache.commons)
-
     implementation(libs.koin.android)
-
     implementation(libs.kotlinx.coroutines.core)
-
+    ksp(libs.room.compiler)
     implementation(libs.room.runtime)
     implementation(libs.room.ktx)
-    ksp(libs.room.compiler)
-
     implementation(libs.ui.text.android)
 }

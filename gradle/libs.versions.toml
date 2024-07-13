@@ -1,7 +1,7 @@
 [versions]
 activityCompose                = "1.9.0"
-composeBom                     = "2024.05.00"
-uiTextAndroid                  = "1.6.7"
+composeBom                     = "2024.06.00"
+uiTextAndroid                  = "1.6.8"
 material3                      = "1.2.1"
 navigationCompose              = "2.7.7"
 room                           = "2.6.1"
@@ -10,10 +10,10 @@ koinAndroidxCompose            = "3.5.3"
 kotlinxCoroutinesCore          = "1.7.3"
 commonsCsv                     = "1.5"
 
-androidApplication      = "8.4.1"
-jetbrainsKotlinAndroid  = "1.9.23"
-androidLibrary          = "8.4.1"
-googleDevtoolsKsp       = "1.9.23-1.0.20"
+androidApplication      = "8.5.1"
+jetbrainsKotlinAndroid  = "1.9.24"
+androidLibrary          = "8.5.1"
+googleDevtoolsKsp       = "1.9.24-1.0.20"
 jlleitschuhGradleKtlint = "11.6.0"
 
 [libraries]

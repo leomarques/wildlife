@@ -41,7 +41,7 @@ android {
         compose = true
     }
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.5.13"
+        kotlinCompilerExtensionVersion = "1.5.14"
     }
     packaging {
         resources {
@@ -52,16 +52,11 @@ android {
 
 dependencies {
     implementation(project(mapOf("path" to ":domain")))
-
     implementation(platform(libs.compose.bom))
     implementation(libs.activity.compose)
-
-    implementation(libs.koin.android)
     implementation(libs.koin.androidx.compose)
-
     implementation(libs.material3)
     implementation(libs.navigation.compose)
-
     implementation(libs.ui.tooling.preview)
     debugImplementation(libs.ui.tooling)
 }
